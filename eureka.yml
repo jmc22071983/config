@@ -49,9 +49,12 @@ eureka:
     region: eu-west-1
     availabilityZones:
         eu-west-1: eu-west-1a,eu-west-1b,eu-west-1c
-    registerWithEureka: false
-    fetchRegistry: false
+    registerWithEureka: true
+    fetchRegistry: true
     eurekaServerDNSName: r53config.vpc
     eurekaServerPort: 8761
     eurekaServerURLContext: /eureka/eureka
     useDnsForFetchingServiceUrls: true
+  server:
+    bindingStrategy: route53
+    route53DomainTTL: 30
