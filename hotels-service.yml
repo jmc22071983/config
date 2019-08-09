@@ -99,6 +99,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     eurekaServerDNSName: r53config.vpc
+    eurekaServerPort: 8761
     eurekaServerURLContext: /eureka/eureka
     useDnsForFetchingServiceUrls: true
 ribbon:
