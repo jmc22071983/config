@@ -38,6 +38,8 @@ spring:
   profiles: aws
 server:
   port: 8761
+  servlet:
+    context-path: /eureka
 eureka:
   environment: production
   instance:
@@ -51,5 +53,5 @@ eureka:
     fetchRegistry: false
     eurekaServerDNSName: r53config.vpc
     eurekaServerPort: 8761
-    eurekaServerURLContext: eureka
+    eurekaServerURLContext: /eureka/eureka
     useDnsForFetchingServiceUrls: true
