@@ -38,8 +38,6 @@ spring:
   profiles: aws
 server:
   port: 8761
-  servlet:
-    context-path: /eureka
 eureka:
   environment: production
   instance:
