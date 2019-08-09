@@ -46,12 +46,12 @@ eureka:
     non-secure-port: ${server.port}
     hostname: eureka
   client:
-region: eu-west-1
-availabilityZones:
+    region: eu-west-1
+    availabilityZones:
         eu-west-1: eu-west-1a,eu-west-1b,eu-west-1c
     registerWithEureka: false
     fetchRegistry: false
     eurekaServerDNSName: r53config.vpc
     eurekaServerPort: 8761
-eurekaServerURLContext: /eureka/eureka
+    eurekaServerURLContext: eureka
     useDnsForFetchingServiceUrls: true
