@@ -8,36 +8,36 @@ eureka:
         serviceUrl:
             defaultZone: http://eureka.eurekapass@localhost:8761/eureka/
 zuul:
-	retryable: true
-	routes:
-		eureka:
-			path: /eureka/**
-			sensitiveHeaders: Set-Cookie, Authorization
-			url: http://localhost:8761
-		airlines-service:
-			path: /airlines-api/**
-			sensitiveHeaders: Set-Cookie, Authorization
-			serviceId: AIRLINES-SERVICE         
-		airports-service:
-			path: /airports-api/**
-			sensitiveHeaders: Set-Cookie, Authorization
-			serviceId: AIRPORTS-SERVICE    
-		breweries-service:
-			path: /breweries-api/**
-			sensitiveHeaders: Set-Cookie, Authorization
-			serviceId: BREWERIES-SERVICE    
-		hotels-service:
-			path: /hotels-api/**
-			sensitiveHeaders: Set-Cookie, Authorization
-			serviceId: HOTELS-SERVICE                
-		hotel-breweries-service:
-			path: /hotel-breweries-api/**
-			sensitiveHeaders: Set-Cookie, Authorization
-			serviceId: HOTEL-BREWERIES-SERVICE
+    retryable: true
+    routes:
+        eureka:
+            path: /eureka/**
+            sensitiveHeaders: Set-Cookie, Authorization
+            url: http://localhost:8761
+        airlines-service:
+            path: /airlines-api/**
+            sensitiveHeaders: Set-Cookie, Authorization
+            serviceId: AIRLINES-SERVICE         
+        airports-service:
+            path: /airports-api/**
+            sensitiveHeaders: Set-Cookie, Authorization
+            serviceId: AIRPORTS-SERVICE    
+        breweries-service:
+            path: /breweries-api/**
+            sensitiveHeaders: Set-Cookie, Authorization
+            serviceId: BREWERIES-SERVICE    
+        hotels-service:
+            path: /hotels-api/**
+            sensitiveHeaders: Set-Cookie, Authorization
+            serviceId: HOTELS-SERVICE                
+        hotel-breweries-service:
+            path: /hotel-breweries-api/**
+            sensitiveHeaders: Set-Cookie, Authorization
+            serviceId: HOTEL-BREWERIES-SERVICE
         session-for:
-        	path: /session-for/**
-			sensitiveHeaders: Set-Cookie, Authorization
-			url: http://localhost:8070/session-for-air
+            path: /session-for/**
+            sensitiveHeaders: Set-Cookie, Authorization
+            url: http://localhost:8070/session-for-air
             
 ribbon:
     ConnectTimeout: 10000
@@ -64,32 +64,36 @@ eureka:
         serviceUrl:
             defaultZone: http://eureka.eurekapass@${eureka.instance.hostname}:8761/eureka/
 zuul:
-	retryable: true
-	routes:
-		eureka:
-			path: /eureka/**
-			sensitiveHeaders: Set-Cookie, Authorization
-			url: http://${eureka.instance.hostname}:8761
-		airlines-service:
-			path: /airlines-api/**
-			sensitiveHeaders: Set-Cookie, Authorization
-			serviceId: AIRLINES-SERVICE         
-		airports-service:
-			path: /airports-api/**
-			sensitiveHeaders: Set-Cookie, Authorization
-			serviceId: AIRPORTS-SERVICE    
-		breweries-service:
-			path: /breweries-api/**
-			sensitiveHeaders: Set-Cookie, Authorization
-			serviceId: BREWERIES-SERVICE    
-		hotels-service:
-			path: /hotels-api/**
-			sensitiveHeaders: Set-Cookie, Authorization
-			serviceId: HOTELS-SERVICE                
-		hotel-breweries-service:
-			path: /hotel-breweries-api/**
-			sensitiveHeaders: Set-Cookie, Authorization
-			serviceId: HOTEL-BREWERIES-SERVICE
+    retryable: true
+    routes:
+        eureka:
+            path: /eureka/**
+            sensitiveHeaders: Set-Cookie, Authorization
+            url: http://${eureka.instance.hostname}:8761
+        airlines-service:
+            path: /airlines-api/**
+            sensitiveHeaders: Set-Cookie, Authorization
+            serviceId: AIRLINES-SERVICE         
+        airports-service:
+            path: /airports-api/**
+            sensitiveHeaders: Set-Cookie, Authorization
+            serviceId: AIRPORTS-SERVICE    
+        breweries-service:
+            path: /breweries-api/**
+            sensitiveHeaders: Set-Cookie, Authorization
+            serviceId: BREWERIES-SERVICE    
+        hotels-service:
+            path: /hotels-api/**
+            sensitiveHeaders: Set-Cookie, Authorization
+            serviceId: HOTELS-SERVICE                
+        hotel-breweries-service:
+            path: /hotel-breweries-api/**
+            sensitiveHeaders: Set-Cookie, Authorization
+            serviceId: HOTEL-BREWERIES-SERVICE
+        session-for:
+            path: /session-for/**
+            sensitiveHeaders: Set-Cookie, Authorization
+            url: http://localhost:8070/session-for-air
             
 ribbon:
     ConnectTimeout: 10000
