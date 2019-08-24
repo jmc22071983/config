@@ -50,7 +50,7 @@ hystrix:
                     thread:
                         timeoutInMilliseconds: 10000
                    
-...
+---
 
 spring:
    profiles: swarm
